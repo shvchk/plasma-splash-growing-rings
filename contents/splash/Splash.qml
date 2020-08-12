@@ -25,8 +25,7 @@ Rectangle {
     color: "#000000"
 
     AnimatedImage {
-        id: busyIndicator
-        source: "images/growing-rings.gif"
+        source: "loader.gif"
         anchors.horizontalCenter: parent.horizontalCenter
         y: 0.9 * parent.height - height
         smooth: true
