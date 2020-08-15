@@ -1,4 +1,4 @@
-Growing rings Plasma splashscreen
+## Growing rings Plasma splashscreen
 
 Minimalistic splashscreen.
 
