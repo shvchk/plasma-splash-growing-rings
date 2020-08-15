@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Growing rings - dense</title>
+  <style>
+  :root {
+    --pi: 3.141592653589793;
+  }
+
+  body {
+    background: #000;
+  }
+  
+  svg {
+    overflow: visible;
+  }
+
+  .loading {
+    width: 94px; /* +1px stroke width on all sides */
+    height: 94px; /* +1px stroke width on all sides */
+    padding: 50px;
+    transform: rotate(-90deg);
+  }
+
+  .ring {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1.25;
+    stroke-dasharray: 0, calc(2 * var(--pi) * var(--r));
+    stroke-dashoffset: 0;
+    animation: dash 2.5s cubic-bezier(0, .5, 1, 1) infinite;
+  }
+
+  .ring-0 {
+    --r: 1%;
+    animation-delay: 2s;
+  }
+
+  .ring-1 {
+    --r: 5%;
+    animation-delay: 1.8s;
+  }
+
+  .ring-2 {
+    --r: 10%;
+    animation-delay: 1.6s;
+  }
+
+  .ring-3 {
+    --r: 15%;
+    animation-delay: 1.4s;
+  }
+
+  .ring-4 {
+    --r: 20%;
+    animation-delay: 1.2s;
+  }
+
+  .ring-5 {
+    --r: 25%;
+    animation-delay: 1s;
+  }
+
+  .ring-6 {
+    --r: 30%;
+    animation-delay: .8s;
+  }
+
+  .ring-7 {
+    --r: 35%;
+    animation-delay: .6s;
+  }
+
+  .ring-8 {
+    --r: 40%;
+    animation-delay: .4s;
+  }
+
+  .ring-9 {
+    --r: 45%;
+    animation-delay: .2s;
+  }
+
+  .ring-10 {
+    --r: 50%;
+  }
+
+  @keyframes dash {
+    0% {
+      stroke-dasharray: 0, calc(2 * var(--pi) * var(--r));
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: calc(2 * var(--pi) * var(--r));
+      stroke-dashoffset: 0;
+    }
+    100% {
+      stroke-dasharray: calc(2 * var(--pi) * var(--r));
+      stroke-dashoffset: calc(-2 * var(--pi) * var(--r));
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="item loading">
+  <svg class="rings" viewBox="0 0 100 100">
+    <svg class="ring ring-0" >
+      <circle cx="50%" cy="50%" r="1%"></circle>
+    </svg>
+    <svg class="ring ring-1" >
+      <circle cx="50%" cy="50%" r="5%"></circle>
+    </svg>
+    <svg class="ring ring-2" >
+      <circle cx="50%" cy="50%" r="10%"></circle>
+    </svg>
+    <svg class="ring ring-3" >
+      <circle cx="50%" cy="50%" r="15%"></circle>
+    </svg>
+    <svg class="ring ring-4" >
+      <circle cx="50%" cy="50%" r="20%"></circle>
+    </svg>
+    <svg class="ring ring-5">
+      <circle cx="50%" cy="50%" r="25%"></circle>
+    </svg>
+    <svg class="ring ring-6" >
+      <circle cx="50%" cy="50%" r="30%"></circle>
+    </svg>
+    <svg class="ring ring-7" >
+      <circle cx="50%" cy="50%" r="35%"></circle>
+    </svg>
+    <svg class="ring ring-8" >
+      <circle cx="50%" cy="50%" r="40%"></circle>
+    </svg>
+    <svg class="ring ring-9">
+      <circle cx="50%" cy="50%" r="45%"></circle>
+    </svg>
+    <svg class="ring ring-10">
+      <circle cx="50%" cy="50%" r="50%"></circle>
+    </svg>
+  </svg>
+  </div>
+</body>
+</html>
